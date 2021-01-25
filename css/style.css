@@ -57,6 +57,10 @@ h4 {
     text-align: center;
 }
 
+/* --------------------------*/
+/*           Homepage        */
+/* --------------------------*/
+
 /* -------------Header-------------*/
 .header{
     background-image: url('../assets/img/banner.jpg');
@@ -158,6 +162,15 @@ h4 {
     margin-top: 4rem;
 }
 
+/* --------------------------------*/
+/*           About us page         */
+/* --------------------------------*/
+.about-us__text {
+    text-align: justify;
+}
+
+
+
 @media (min-width: 768px) { 
     /* -------------Headings-------------*/
     h1 {
@@ -196,5 +209,14 @@ h4 {
     /* -------------Blog-------------*/
     .button {
         display: inline-block;
+    }
+
+    /* --------------------------------*/
+    /*           About us page         */
+    /* --------------------------------*/
+    .about-us {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
     }
 }
