@@ -56,7 +56,9 @@ h4 {
 .txt-center {
     text-align: center;
 }
-
+.width {
+    width: 100%;
+}
 /* --------------------------*/
 /*           Homepage        */
 /* --------------------------*/
@@ -123,6 +125,7 @@ h4 {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+    border: none;
 }
 .button--primary {
     background-color: var(--black);
@@ -190,6 +193,43 @@ h4 {
     margin-top: 2rem;
 }
 
+/* --------------------------------*/
+/*           Contact page          */
+/* --------------------------------*/
+.contact-bg {
+    background-image: url('../assets/img/contacto.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40rem;
+}
+
+/* --------------------------------*/
+/*           Form page             */
+/* --------------------------------*/
+.form {
+    background-color: var(--white);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+.field {
+    margin-bottom: 2rem;
+}
+.field__label {
+    display: block;
+    font-size: 1.8rem;
+}
+.field__input {
+    width: 100%;
+    font-size: 1.8rem;
+    border: 1px solid var(--lightGray);
+    padding: 1rem
+}
+.field__input--textarea {
+    height: 20rem;
+}
+
+
 @media (min-width: 768px) { 
     /* --------------------------*/
     /*           Homepage        */
@@ -233,6 +273,9 @@ h4 {
     .button {
         display: inline-block;
     }
+    .button:hover {
+        cursor: pointer;
+    }
 
     /* --------------------------------*/
     /*           About us page         */
@@ -250,5 +293,23 @@ h4 {
         display: grid;
         grid-template-columns: 1fr 2fr;
         column-gap: 2rem;
+    }
+
+    /* --------------------------------*/
+    /*           Form page             */
+    /* --------------------------------*/
+    .field {
+        display: flex;
+    }
+    .field__label {
+        flex: 0 0 9rem;
+        text-align: right;
+        padding-right: 2rem;
+    }
+    /* .field__input {
+        flex: 1;
+    } */
+    .width {
+        width: 25%;
     }
 }
