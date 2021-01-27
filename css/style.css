@@ -64,8 +64,13 @@ h4 {
 /* --------------------------*/
 
 /* -------------Header-------------*/
-.header{
+.webp .header {
+    background-image: url('../assets/img/banner.webp');
+}
+.no-webp .header {
     background-image: url('../assets/img/banner.jpg');
+}
+.header{
     height: 60rem;
     background-size: cover;
     background-repeat: no-repeat;
