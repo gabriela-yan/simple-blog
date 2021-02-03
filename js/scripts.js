@@ -18,39 +18,32 @@ form.addEventListener('submit',function(event){
     const {name, email, message} = data;
     
     if(name === '' || email === '' || message === '') {
-        showError('Todos los campos son obligatorios');
+        showAlert('Todos los campos son obligatorios', true);
         return;
     }
 
-    showSuccess('Mensaje enviado correctamente');
+    showAlert('Mensaje enviado correctamente');
     
 });
 
 function readText(event) {
     data[event.target.id] = event.target.value;
-    console.log(data);
+    // console.log(data);
 }
 
-function showError(message) {
-    const error = document.createElement('P');
-    error.textContent = message;
-    error.classList.add('error');
+//Refactoring
+function showAlert(message, error = null){
+    const alert = document.createElement('P');
+    alert.textContent = message;
 
-    form.appendChild(error);
+    if(error){
+        alert.classList.add('error');
+    } else {
+        alert.classList.add('success');
+    }
 
-    setTimeout( () => {
-        error.remove();
-    },5000)
-}
-
-function showSuccess(message) {
-    const success = document.createElement('P');
-    success.textContent = message;
-    success.classList.add('success');
-
-    form.appendChild(success);
-
-    setTimeout( () => {
-        success.remove();
+    form.appendChild(alert);
+    setTimeout(() => {
+        alert.remove();
     },5000)
 }
