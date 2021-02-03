@@ -208,6 +208,7 @@ h4 {
     height: 40rem;
 }
 
+
 /* --------------------------------*/
 /*           Form page             */
 /* --------------------------------*/
@@ -233,7 +234,17 @@ h4 {
 .field__input--textarea {
     height: 20rem;
 }
-
+.error, .success {
+    background-color: rgb(185, 0, 0);
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.success {
+    background-color: rgb(0, 147, 0);
+}
 
 @media (min-width: 768px) { 
     /* --------------------------*/
@@ -317,4 +328,8 @@ h4 {
     .width {
         width: 25%;
     }
+    .error, .success {
+        font-size: 1.8rem;
+    }
+
 }
